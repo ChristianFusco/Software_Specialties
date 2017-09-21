@@ -24,9 +24,7 @@ public abstract class Guitar {
 	public Guitar() {
 	}
 	
-	public void play() {
-		System.out.println(name + " makes some noises.  Reeeeeeeeeeee.");
-	}
+	abstract void play();
 
 	public void setName(String name) {
 		this.name = name;
