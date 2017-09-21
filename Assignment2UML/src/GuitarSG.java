@@ -22,4 +22,8 @@ public class GuitarSG extends Guitar {
 	public GuitarSG() {
 		name = "Gibson SG";
 	}
+	
+	public void play() {
+		System.out.println(name + " plays a darker, more sustained tone.");
+	}
 }
