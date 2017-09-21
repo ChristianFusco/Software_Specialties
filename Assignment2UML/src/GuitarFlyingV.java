@@ -22,4 +22,8 @@ public class GuitarFlyingV extends Guitar {
 	public GuitarFlyingV() {
 		name = "Gibson Flying V";
 	}
+	
+	public void play() {
+		System.out.println(name + " plays a warmer, easily distorted tone.");
+	}
 }
