@@ -22,4 +22,7 @@ public class GuitarFender extends Guitar {
 	public GuitarFender() {
 		name = "Fender Telecaster";
 	}
+	public void play() {
+		System.out.println(name + " plays a fuller, punchier tone.");
+	}
 }
