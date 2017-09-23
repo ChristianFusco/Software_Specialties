@@ -5,7 +5,7 @@ Date Assigned: 9/12/2017
 Due Date: 9/19/2017
 
 Description:
-UML Design doc with example java code.
+UML design doc with matching java code.  A program for managing flights and iternaries.
 
 Certification of Authenticity: 
 I certify that this is entirely my own work, except where I have given 

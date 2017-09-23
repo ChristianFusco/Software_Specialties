@@ -5,7 +5,7 @@ Date Assigned: 9/12/2017
 Due Date: 9/19/2017
 
 Description:
-UML Design doc with example java code.
+UML design doc with matching java code.  A program for managing flights and iternaries.
 
 Certification of Authenticity: 
 I certify that this is entirely my own work, except where I have given 
@@ -21,8 +21,17 @@ import java.util.ArrayList;
 
 public class Customer {
 	ArrayList<Booking> bookings;
-	String firstName, lastName, address;
-	
+	String firstName, lastName;
+
+	public String toString() {
+		String output = "Bookings for " + firstName + " " + lastName + "\n\n";
+		for (Booking booking : bookings){
+			Itinerary i = new Itinerary(this, booking);
+			output += i.toString();
+		}
+		return output;
+	}
+
 	void addFlight(Booking booking) {
 		bookings.add(booking);
 	}
@@ -51,19 +60,10 @@ public class Customer {
 		this.lastName = lastName;
 	}
 
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public Customer(String firstName, String lastName, String address) {
+	public Customer(String firstName, String lastName) {
 		super();
 		bookings = new ArrayList<Booking>();
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.address = address;
 	}
 }

@@ -18,16 +18,15 @@ assignment may, for the purpose of assessing this assignment:
 - the purpose of future plagiarism checking)
 */
 
-public class Plane {
-	Company company;
-	int flightCapcity;
+public class VIPSeat implements Seat {
+	double price;
+	String number;
 
-	void setBelongsTo(Company company, int flightCapcity) {
-		this.company = company;
-		this.flightCapcity = flightCapcity;
+	VIPSeat(String number) {
+		this.price = 200.00;
+		this.number = number;
 	}
-
-	int getFlightCapcity() {
-		return flightCapcity;
+	public String toString() {
+		return "VIP seat, " + number + ", costs $" + price + ".";
 	}
 }

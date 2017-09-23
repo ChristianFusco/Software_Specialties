@@ -5,7 +5,7 @@ Date Assigned: 9/12/2017
 Due Date: 9/19/2017
 
 Description:
-UML Design doc with example java code.
+UML design doc with matching java code.  A program for managing flights and iternaries.
 
 Certification of Authenticity: 
 I certify that this is entirely my own work, except where I have given 
@@ -20,16 +20,19 @@ assignment may, for the purpose of assessing this assignment:
 
 public class Flight {
 	Plane plane;
-	String departureDate, departurePlace, destenationPlace, departureTime, expectedDuration;
-	public Flight(Plane plane, String departureDate, String departurePlace, String destenationPlace,
+	String departureDate, departurePlace, DestinationPlace, departureTime, expectedDuration;
+	int flightCapacity;
+
+	public Flight(Plane plane, String departureDate, String departurePlace, String DestinationPlace,
 			String departureTime, String expectedDuration) {
 		super();
 		this.plane = plane;
 		this.departureDate = departureDate;
 		this.departurePlace = departurePlace;
-		this.destenationPlace = destenationPlace;
+		this.DestinationPlace = DestinationPlace;
 		this.departureTime = departureTime;
 		this.expectedDuration = expectedDuration;
+		this.flightCapacity = plane.getFlightCapcity();
 	}
 	public Flight() {
 		super();
@@ -52,11 +55,11 @@ public class Flight {
 	public void setDeparturePlace(String departurePlace) {
 		this.departurePlace = departurePlace;
 	}
-	public String getDestenationPlace() {
-		return destenationPlace;
+	public String getDestinationPlace() {
+		return DestinationPlace;
 	}
-	public void setDestenationPlace(String destenationPlace) {
-		this.destenationPlace = destenationPlace;
+	public void setDestinationPlace(String DestinationPlace) {
+		this.DestinationPlace = DestinationPlace;
 	}
 	public String getDepartureTime() {
 		return departureTime;
@@ -69,5 +72,8 @@ public class Flight {
 	}
 	public void setExpectedDuration(String expectedDuration) {
 		this.expectedDuration = expectedDuration;
+	}
+	public int getFlightCapcity() {
+		return flightCapacity;
 	}
 }

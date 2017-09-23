@@ -5,7 +5,7 @@ Date Assigned: 9/12/2017
 Due Date: 9/19/2017
 
 Description:
-UML Design doc with example java code.
+UML design doc with matching java code.  A program for managing flights and iternaries.
 
 Certification of Authenticity: 
 I certify that this is entirely my own work, except where I have given 
@@ -18,36 +18,6 @@ assignment may, for the purpose of assessing this assignment:
 - the purpose of future plagiarism checking)
 */
 
-public class Seat {
-	Double price;
-	String number, type;
-	public Double getPrice() {
-		return price;
-	}
-	public void setPrice(Double price) {
-		this.price = price;
-	}
-	public String getNumber() {
-		return number;
-	}
-	public void setNumber(String number) {
-		this.number = number;
-	}
-	public String getType() {
-		return type;
-	}
-	public void setType(String type) {
-		this.type = type;
-	}
-	public Seat(Double price, String number, String type) {
-		super();
-		this.price = price;
-		this.number = number;
-		this.type = type;
-	}
-	
-	@Override
-	public String toString() {
-		return " $" + price + " " + number + " " + type;
-	}
+public interface Seat {
+	public String toString();
 }
