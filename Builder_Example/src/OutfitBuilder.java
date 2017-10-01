@@ -1,10 +1,18 @@
 class OutfitBuilder {
-    protected String top = "no top??";
-    protected String bottom = "no bottom??";
-    protected String socks = "no socks";
-    protected String shoes = "no shoes";
-    protected String jacket = "no jacket";
+    protected String top;
+    protected String bottom;
+    protected String socks;
+    protected String shoes;
+    protected String jacket;
     
+    public OutfitBuilder() {
+        top = "no top";
+        bottom = "no bottom";
+        socks = "no socks";
+        shoes = "no shoes";
+        jacket = "no jacket";
+    }
+
     public OutfitBuilder setTop(String top) {
         this.top = top;
         return this;
