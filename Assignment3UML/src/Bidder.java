@@ -7,6 +7,8 @@ abstract class Bidder extends Observer{
     public Bidder(Auctioneer auctioneer, String name) {
         this.auctioneer = auctioneer;
         this.name = name;
+        lastBid = -1;
+        currentBid = 0;
     }
     
     public void update() {
