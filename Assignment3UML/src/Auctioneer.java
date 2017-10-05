@@ -28,6 +28,10 @@ class Auctioneer implements Subject {
         this.item = item;
         highestBid = item.getInitialPrice();
     }
+
+    public String getItemName() {
+        return item.getName();
+    }
     
     public void addObserver(Observer observer) {
         observers.add(observer);
@@ -38,15 +42,15 @@ class Auctioneer implements Subject {
     }
     
     public void addBid(double bid, Bidder bidder) {
+        counter++;
         if (checkBid(bid)) {
-            counter ++;
             if (bid > highestBid) {
                 highestBid = bid;
                 highestBidder = bidder;
                 notifyObservers();
             }
         }
-        if (counter > maxCounter) {
+        if (counter == maxCounter) {
             announceWinner();
         }
     }
