@@ -10,6 +10,10 @@ class Auctioneer implements Subject {
     Auctioneer() {
         observers = new ArrayList<>();
         counter = 0;
+        maxCounter = 0;
+        highestBid = 0;
+        highestBidder = null;
+        item = null;
     }
 
     public double getCounter() {
@@ -53,7 +57,7 @@ class Auctioneer implements Subject {
         }
     }
     
-    private void announceWinner() {
+    public void announceWinner() {
         System.out.println(item.getName() + " was sold to " + highestBidder.getName() + " for $" + highestBid);
     }
     

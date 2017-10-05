@@ -6,9 +6,11 @@ public class HelloWorld{
         WealthyBidder chauncy = new WealthyBidder(auctioneer, "Chauncy");
         auctioneer.addObserver(chauncy);
         auctioneer.setMaxCounter(totalRounds);
+        auctioneer.setItem(rock);
         while (auctioneer.getCounter() < totalRounds) {
             chauncy.bid();
         }
+        auctioneer.announceWinner();
     }
     
 }
