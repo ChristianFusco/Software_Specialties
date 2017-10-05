@@ -5,7 +5,7 @@ abstract class Bidder extends Observer{
     private String name;
     
     public Bidder(Auctioneer auctioneer, String name) {
-        this.auctioneeer = auctioneer;
+        this.auctioneer = auctioneer;
         this.name = name;
     }
     
@@ -17,7 +17,7 @@ abstract class Bidder extends Observer{
         return lastBid != currentBid;
     }
     
-    public void bid();
+    abstract void bid();
     
     public String getName() {
         return name;

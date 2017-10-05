@@ -1,12 +1,17 @@
 import java.util.ArrayList;
 class Auctioneer implements Subject {
     private Item item;
-    private double higestBid;
+    private double highestBid;
     private int maxCounter;
-    private int counter = 0;
+    private int counter;
     private Bidder highestBidder;
     private ArrayList<Observer> observers;
     
+    Auctioneer() {
+        observers = new ArrayList<>();
+        counter = 0;
+    }
+
     public double getCounter() {
         return counter;
     }
@@ -17,6 +22,7 @@ class Auctioneer implements Subject {
     
     public void setItem(Item item) {
         this.item = item;
+        highestBid = item.getInitialPrice();
     }
     
     public void addObserver(Observer observer) {
@@ -27,10 +33,10 @@ class Auctioneer implements Subject {
         return (bid > item.getInitialPrice());
     }
     
-    public void addBid(double bid, Observer bidder) {
+    public void addBid(double bid, Bidder bidder) {
         if (checkBid(bid)) {
             counter ++;
-            if (bid > higestBid) {
+            if (bid > highestBid) {
                 highestBid = bid;
                 highestBidder = bidder;
                 notifyObservers();
@@ -41,9 +47,9 @@ class Auctioneer implements Subject {
         }
     }
     
-    private void notifyObservers() {
+    public void notifyObservers() {
         for (int count = 0; count < observers.size(); count++) {
-            observer.get(count).update();
+            observers.get(count).update();
         }
     }
     

@@ -1,3 +1,3 @@
 abstract class Observer {
-    public void update();
+    abstract void update();
 }

@@ -1,9 +1,9 @@
 public class HelloWorld{
     public static void main(String args[]){
-        int totalRounds;
+        int totalRounds = 10;
         Item rock = new Item(3.5, "pet rock");
         Auctioneer auctioneer = new Auctioneer();
-        Observer chauncy = new WealthyBidder(auctioneer, "Chauncy");
+        WealthyBidder chauncy = new WealthyBidder(auctioneer, "Chauncy");
         auctioneer.addObserver(chauncy);
         auctioneer.setMaxCounter(totalRounds);
         while (auctioneer.getCounter() < totalRounds) {
