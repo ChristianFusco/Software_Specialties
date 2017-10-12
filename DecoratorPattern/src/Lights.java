@@ -17,14 +17,14 @@ assignment may, for the purpose of assessing this assignment:
 - service (which may then retain a copy of this assignment on its database for
 - the purpose of future plagiarism checking)
 */
-public class BallsSilver extends TreeDecorator {
+public class Lights extends TreeDecorator {
 
-	public BallsSilver(Tree decoratedTree) {
+	public Lights(Tree decoratedTree) {
 		super(decoratedTree);
-		name = "Silver Balls";
+		name = "Lights";
 	}
 
 	public double getPrice() {
-		return decoratedTree.getPrice() + 3;
+		return decoratedTree.getPrice() + 5;
 	}
 }

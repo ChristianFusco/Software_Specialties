@@ -1,4 +1,4 @@
 make:
 	javac src/*.java
 	mv src/*.class bin/
-	cd bin && java runner
+	cd bin && java HelloWorld
